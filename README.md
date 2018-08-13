@@ -24,4 +24,4 @@ Prerender will now be running on http://localhost:3000. Try the container out wi
 curl http://localhost:3000/render?url=https://www.example.com/
 ```
 
-See the complete Prerender documentation for additional information: https://github.com/prerender/prerender
+Check out the official Prerender documentation: https://github.com/prerender/prerender
