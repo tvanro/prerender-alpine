@@ -3,7 +3,7 @@
 Lightweight Prerender container built on Alpine Linux with Node and Headless Chrome.
 
 - Prerender 5.4.4
-- Chromium 68.0.3440.106-r0
+- Chromium 68.0.3440.75
 - Node 10.12.0
 
 ## Requirements
