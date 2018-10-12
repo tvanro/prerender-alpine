@@ -15,8 +15,8 @@ Lightweight Prerender container built on Alpine Linux with Node and Headless Chr
 Pull and run the image:
 
 ```
-docker pull tvanro/prerender-alpine:5.4.4
-docker run -p 3000:3000 tvanro/prerender-alpine:5.4.4
+docker pull tvanro/prerender-alpine:5.4.4-optimized
+docker run -p 3000:3000 tvanro/prerender-alpine:5.4.4-optimized
 ```
 Prerender will now be running on http://localhost:3000. Try the container out with curl:
 
