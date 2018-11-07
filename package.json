@@ -8,6 +8,6 @@
   },
   "dependencies": {
     "prerender": "5.4.4",
-    "prerender-extension-blacklist": "1.0.0"
+    "prerender-request-blacklist": "1.0.2"
   }
 }
