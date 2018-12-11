@@ -1,4 +1,4 @@
-FROM node:10.12.0-alpine
+FROM node:10.14-alpine
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
 
@@ -6,7 +6,7 @@ COPY ./package.json .
 COPY ./server.js .
 
 # use edge repositories
-RUN sed -i -e 's/v3\.7/edge/g' /etc/apk/repositories
+RUN sed -i -e 's/v3\.8/edge/g' /etc/apk/repositories
 
 # install chromium and clear cache
 RUN apk add --update-cache chromium \
