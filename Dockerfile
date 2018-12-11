@@ -6,7 +6,7 @@ COPY ./package.json .
 COPY ./server.js .
 
 # use edge repositories
-RUN sed -i -e 's/v3\.8/edge/g' /etc/apk/repositories
+# RUN sed -i -e 's/v3\.8/edge/g' /etc/apk/repositories
 
 # install chromium and clear cache
 RUN apk add --update-cache chromium \
