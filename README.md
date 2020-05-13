@@ -37,6 +37,19 @@ This can be modified by creating your own `server.js` and mounting this file as 
 docker run -p 3000:3000 -v $(pwd)/server.js:/server.js tvanro/prerender-alpine:6.0.1 
 ```
 
+## Prerender memory cache
+
+The [prerender-memory-cache](https://github.com/prerender/prerender-memory-cache) plugin is not activated by default.
+You can activate it with the environment variable `MEMORY_CACHE=1`.
+
+You can customize cache behavior with environment variables :
+- CACHE_MAXSIZE=1000 : max number of objects in cache
+- CACHE_TTL=6000 : time to live in seconds
+
+```
+docker run -p 3000:3000 -e MEMORY_CACHE=1 -e CACHE_MAXSIZE=1000 -e CACHE_TTL=6000 tvanro/prerender-alpine:6.0.1 
+```
+
 ## Prerender documentation
 
 Check out the official Prerender documentation: https://github.com/prerender/prerender

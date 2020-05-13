@@ -1,6 +1,8 @@
 FROM node:12-alpine
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
+ENV MEMORY_CACHE=0
+
 
 COPY ./package.json .
 COPY ./server.js .
