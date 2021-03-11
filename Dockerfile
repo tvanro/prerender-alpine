@@ -4,19 +4,12 @@ ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
 ENV MEMORY_CACHE=0
 
-ENV UNAME=prerender
-ENV UID=1001
-ENV GID=1001
-
 # install chromium, tini and clear cache
 RUN apk add --update-cache chromium tini \
  && rm -rf /var/cache/apk/* /tmp/*
 
-RUN addgroup --gid "$GID" "$UNAME" && \
-    adduser --disabled-password --gecos "" --ingroup "$UNAME" --uid "$UID" "$UNAME"
-
-USER $UNAME
-WORKDIR "/home/$UNAME"
+USER node
+WORKDIR "/home/node"
 
 COPY ./package.json .
 COPY ./server.js .
