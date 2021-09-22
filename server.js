@@ -1,3 +1,5 @@
+'use strict';
+
 const prerender = require('prerender');
 const prMemoryCache = require('prerender-memory-cache');
 
