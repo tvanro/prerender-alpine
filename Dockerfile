@@ -1,4 +1,4 @@
-FROM node:14-alpine3.14
+FROM node:16-alpine
 
 ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
