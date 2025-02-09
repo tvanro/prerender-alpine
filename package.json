@@ -1,13 +1,13 @@
 {
   "name": "prerender-alpine",
-  "version": "6.6.1",
+  "version": "6.6.2",
   "description": "lightweight prerender container built on alpine linux",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "prerender": "5.20.4",
+    "prerender": "5.21.6",
     "prerender-memory-cache": "1.0.2"
   }
 }
