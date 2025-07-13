@@ -4,9 +4,8 @@ ENV CHROME_BIN=/usr/bin/chromium-browser
 ENV CHROME_PATH=/usr/lib/chromium/
 ENV MEMORY_CACHE=0
 
-# install chromium, tini and clear cache
-RUN apk add --no-cache chromium tini \
- && rm -rf /var/cache/apk/* /tmp/*
+# install chromium, tini
+RUN apk add --no-cache chromium tini
 
 USER node
 WORKDIR "/home/node"
@@ -16,7 +15,8 @@ COPY ./server.js .
 
 # install npm packages and clear cache
 RUN npm install --no-package-lock \
- && npm cache clean --force
+ && npm cache clean --force \
+ && rm -rf /var/cache/apk/* /tmp/*
 
 EXPOSE 3000
 
