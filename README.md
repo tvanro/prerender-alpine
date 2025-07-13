@@ -3,8 +3,8 @@
 Lightweight Prerender container built on Alpine Linux with Node and Headless Chromium.
 
 - Prerender 5.21.6
-- Chromium 132.0.6834.83
-- Node 22.13.1
+- Chromium 138.0.7204.93
+- Node 22.17.0
 
 ## Requirements
 
@@ -15,8 +15,8 @@ Lightweight Prerender container built on Alpine Linux with Node and Headless Chr
 Pull and run the image:
 
 ```
-docker pull tvanro/prerender-alpine:7.0.1
-docker run -p 3000:3000 tvanro/prerender-alpine:7.0.1
+docker pull tvanro/prerender-alpine:7.1.0
+docker run -p 3000:3000 tvanro/prerender-alpine:7.1.0
 ```
 Prerender will now be running on http://localhost:3000. Try the container out with curl:
 
@@ -34,7 +34,7 @@ A few default plugins have been activated by default (see `server.js`):
 This can be modified by creating your own `server.js` and mounting this file as a docker volume:
 
 ```
-docker run -p 3000:3000 -v $(pwd)/server.js:/home/node/server.js tvanro/prerender-alpine:7.0.1 
+docker run -p 3000:3000 -v $(pwd)/server.js:/home/node/server.js tvanro/prerender-alpine:7.1.0 
 ```
 
 ## Prerender memory cache
@@ -47,7 +47,7 @@ You can customize cache behavior with environment variables :
 - CACHE_TTL=6000 : time to live in seconds
 
 ```
-docker run -p 3000:3000 -e MEMORY_CACHE=1 -e CACHE_MAXSIZE=1000 -e CACHE_TTL=6000 tvanro/prerender-alpine:7.0.1 
+docker run -p 3000:3000 -e MEMORY_CACHE=1 -e CACHE_MAXSIZE=1000 -e CACHE_TTL=6000 tvanro/prerender-alpine:7.1.0 
 ```
 
 ## Prerender documentation
