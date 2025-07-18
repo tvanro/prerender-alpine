@@ -14,6 +14,11 @@ if (memCache === 1) {
     server.use(prMemoryCache);
 }
 
+const s3Cache = Number(process.env.S3_CACHE) || 0;
+if (s3Cache === 1) {
+    server.use(require('prerender-aws-s3-cache'));
+}
+
 server.use(prerender.blacklist());
 server.use(prerender.httpHeaders());
 server.use(prerender.removeScriptTags());

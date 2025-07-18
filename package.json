@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "prerender": "5.21.6",
+    "prerender-aws-s3-cache": "1.0.1",
     "prerender-memory-cache": "1.0.2"
   }
 }

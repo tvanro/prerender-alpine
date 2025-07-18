@@ -50,6 +50,17 @@ You can customize cache behavior with environment variables :
 docker run -p 3000:3000 -e MEMORY_CACHE=1 -e CACHE_MAXSIZE=1000 -e CACHE_TTL=6000 tvanro/prerender-alpine:7.1.0 
 ```
 
+## Prerender S3 cache
+
+The [Prerender S3 Cache plugin](https://github.com/prerender/prerender-aws-s3-cache) is not activated by default.
+You can activate it with the environment variable `S3_CACHE=1`.
+
+You'll need to sign up with S3 compatible service and set these 3 environment variables:
+
+- `AWS_ACCESS_KEY_ID`
+- `AWS_SECRET_ACCESS_KEY`
+- `S3_BUCKET_NAME`
+
 ## Prerender documentation
 
 Check out the official Prerender documentation: https://github.com/prerender/prerender
